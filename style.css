@@ -1,0 +1,130 @@
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: #efefef;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.title {
+  text-align: center;
+  padding: 10px;
+  background: #fff;
+}
+
+.container {
+  display: flex;
+  border-top: 3px solid #bfbfbf;
+  min-height: 80%;
+}
+
+.number-cell {
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cell-outer {
+  width: 33.33%;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  font-family: sans-serif;
+  position: relative;
+}
+
+.cell-inner {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+
+.cell-value {
+  z-index: 1;
+}
+
+.buttons {
+  font-size: 9px;
+  line-height: 16px;
+  border-radius: 5px;
+  border: 1px solid #c1cbd5;
+  cursor: pointer;
+  margin: 15px;
+  min-width: 100px;
+  padding: 5px 12px;
+  text-align: center;
+  background-color: #72c3dc;
+  color: #ffffff;
+  border: 1px solid transparent;
+  text-transform: uppercase;
+  box-shadow: 0px 3px #2b8ead;
+  display: block;
+  outline: none;
+}
+
+.name {
+  text-align: center;
+  color: #2f454e;
+  text-decoration-style: italic;
+  font-style: italic;
+  font-size: 15px;
+  padding-top: 20px;
+  min-height: 20%;
+}
+
+@media only screen and (max-width: 375px) {
+  #root,
+  .name {
+    background: white;
+  }
+  .container {
+    flex-flow: column nowrap;
+    background: white;
+    border-top: 0;
+  }
+  .number-cell {
+    width: 100%;
+    flex-grow: 1;
+    order: 1;
+    padding: 0px 20px;
+  }
+  .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .cell-outer {
+    width: 100%;
+    background-color: #efefef;
+    color: black;
+    margin-bottom: 5px;
+    padding: 10px;
+  }
+
+  .cell-inner {
+    width: 2%;
+  }
+  .cell-value {
+    font-size: 10px;
+  }
+
+  .buttons {
+    margin: 15px 5px;
+  }
+  .title {
+    background-color: #000000;
+    color: #ffffff;
+  }
+}
